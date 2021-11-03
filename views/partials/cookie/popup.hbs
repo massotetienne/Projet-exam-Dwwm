@@ -1,0 +1,28 @@
+{{!-- ID à injecter Pop-Up
+<div id="{{ idAllCookie }}"></div>
+
+{{!-- Oups --}}
+{{!-- <div class='{{idAllCookie}} text-center'></div> --}}
+
+{{!-- 
+    Injection du code après un delai
+    Et suppression après un delai
+    Pop-Up
+--}}
+{{!-- {{#if idAllCookie }}
+<script>
+  setTimeout(() => { // J'attend 1.5s pour faire apparaitre ma div
+    $('#{{ idAllCookie }}').ready(() => {
+      console.log('csddsc')
+      $("#{{ idAllCookie }}").html(`
+        <div class='bienvenu'>
+          <h2 class='text'> Bienvenu </h2>
+        </div>
+      `)
+      setTimeout(() => { // J'attent 5.5s pour supprimer les enfants de la div#idAllCookie
+        $("#{{ idAllCookie }}").empty();
+      }, 5500)
+    })
+  }, 1500)
+</script>
+{{/if}} --}} --}}

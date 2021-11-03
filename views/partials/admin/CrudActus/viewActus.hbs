@@ -1,0 +1,30 @@
+<div class="modal fade " id="viewActus{{_id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-black">
+            <div class="modal-header bg-gold black">
+                <h5 class="modal-title" id="exampleModalLabel">Gestion Articles</h5>
+                <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                    <span class="honey" aria-hidden="false">&times;</span>
+                </button>
+            </div>
+
+            <div>
+                <img src="{{image}}" class="card-img-top img-std" alt="Placeholder image">
+                <div class="card-body">
+                    <h5 class="card-title" value="title">{{title}}</h5>
+                    <p class="card-text">{{stripTags content}}</p>
+                </div>
+                <div class="card-footer">
+                    <p>Publié par {{author}} </p>
+                    <p class="text-right">Le : {{dateCreateDB}}</p>
+                    {{!-- <small class="text-muted">Last updated 3 mins ago</small> --}}
+                </div>
+            </div>
+
+            <div class="modal-footer bg-gold">
+                <button type="button" class="btn bg-black honey" data-dismiss="modal">Close</button>
+                {{!-- <button type="button" class="btn bg-honey">Save changes</button> --}}
+            </div>
+        </div>
+    </div>
+</div>

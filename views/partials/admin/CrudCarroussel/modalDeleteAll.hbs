@@ -1,0 +1,31 @@
+<!-- Central Modal Small -->
+<div class="modal fade" id="modalDeleteAll{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <!-- Change class .modal-sm to change the size of the modal -->
+  <div class="modal-dialog modal-sm" role="document">
+
+    <div class="modal-content">
+      <div class="modal-header bg-gold">
+        <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body bg-black honey">
+        Voulez vous vraiment supprimer ? <br>
+        {{_id}}
+      </div>
+
+      <form action="/carroussel/edit/{{_id}}?_method=PUT" method="post">
+        <div class="modal-footer bg-gold">
+          <input type="hidden" name="deleteImgAll" value='all'>
+          <button type="submit" class="btn bg-black honey btn-sm">YES</button>
+          <button type="submit" class="btn bg-black honey btn-sm" data-dismiss="modal">NO</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<!-- Central Modal Small -->

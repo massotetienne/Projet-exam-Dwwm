@@ -1,0 +1,48 @@
+<!-- ================================================================================================= -->
+
+<!-- Card events -->
+<div>
+    <h3 class="container bg-black ft-45 p-2 mt-15vh text-center">Mon calendrier d'events</h3>
+</div>
+
+<div class="container d-flex justify-content-center">
+    <iframe
+        src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FParis&amp;
+        src=bWFzc290LmV0aWVubmVwcm9AZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;
+        src=ZnIuZnJlbmNoI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%230B8043"
+        style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no">
+    </iframe>
+</div>
+
+
+<div>
+    <h3 class="container bg-black ft-45 p-2 mt-3  text-center">Events</h3>
+</div>
+
+<div class="container p-2">
+    <div class="row">
+        {{#each event}}
+        <div class="card col-lg-4 col-md-6 col-sm-12 bg-black p-3  mx-auto border">
+            <img src="{{image}}" class="card-img-top img-std" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                <p class="card-text">{{content}}</p>
+            </div>
+            <div class="card-footer d-flex justify-content-around">
+                <small class="text-muted text-left"> Publié par : {{author}} </small>
+                <small class="text-muted text-right"> Le : {{dateCreateDB}} </small>
+            </div>
+            <div>
+                <p class="d-flex justify-content-around">Plus d'info <a href="{{ link }}" target='_blank' class="btn bg-gold">Cliquez
+                        ici</a></p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+</div>
+
+
+<!-- Card events fin  -->
+
+<!-- ================================================================================================= -->

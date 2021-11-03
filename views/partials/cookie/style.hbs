@@ -1,0 +1,46 @@
+{{!-- 
+    Partial cookie/style.hbs
+    :style
+--}}
+
+{{!-- Style gerer grace au jquery importer dans le partial ./views/partial/end.hbs --}}
+{{!-- <style>
+    #{{ idAllCookie }} {
+        transition: all 3s;
+        position: absolute;
+        background-color: lime;
+        top: 20px;
+        right: 20px;
+    }
+    .bienvenu {
+        color: blue;
+    }
+</style>
+
+{{!-- Background Cookie --}}
+{{#if allCookie }}
+<style>
+    body {
+        background-color: purple;
+    }
+</style>
+{{else if CCookie }}
+<style>
+    body {
+        background-color: green;
+    }
+</style>
+{{else if CPtiGato }}
+<style>
+    body {
+        background-color: yellow;
+    }
+</style>
+{{else if CSession }}
+<style>
+    body {
+        background-color: gray;
+    }
+</style>
+{{else }}
+{{/if }} --}}

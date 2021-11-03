@@ -1,0 +1,516 @@
+{
+    "definitions": {},
+    "info": {
+      "title": "caligari-tatoo",
+      "version": "1.0.0",
+      "license": {
+        "name": "ISC"
+      },
+      "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3).\n\nsite vitrine pour Caligari-Tatoo"
+    },
+    "paths": {
+      "/user/get": {
+        "get": {
+          "summary": "/user/get",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/user/post": {
+        "post": {
+          "summary": "/user/post",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/user/LoginGet": {
+        "get": {
+          "summary": "/user/LoginGet",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/user/LoginPost": {
+        "post": {
+          "summary": "/user/LoginPost",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/user/Logout": {
+        "get": {
+          "summary": "/user/Logout",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/articles/get": {
+        "get": {
+          "summary": "/articles/get",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/articles/post": {
+        "post": {
+          "summary": "/articles/post",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/articles/delete/{id}": {
+        "get": {
+          "summary": "/articles/delete/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/articles/update/{id}": {
+        "post": {
+          "summary": "/articles/update/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/article/{id}": {
+        "get": {
+          "summary": "/article/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/gallerie/get": {
+        "get": {
+          "summary": "/gallerie/get",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/gallerie/post": {
+        "post": {
+          "summary": "/gallerie/post",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/gallerie/delete/{id}": {
+        "get": {
+          "summary": "/gallerie/delete/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/gallerie/update/{id}": {
+        "post": {
+          "summary": "/gallerie/update/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/event/get": {
+        "get": {
+          "summary": "/event/get",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/event/post": {
+        "post": {
+          "summary": "/event/post",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/event/delete/{id}": {
+        "get": {
+          "summary": "/event/delete/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/event/update/{id}": {
+        "post": {
+          "summary": "/event/update/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/croquis/get": {
+        "get": {
+          "summary": "/croquis/get",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/croquis/post": {
+        "post": {
+          "summary": "/croquis/post",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/croquis/delete/{id}": {
+        "get": {
+          "summary": "/croquis/delete/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/croquis/update/{id}": {
+        "post": {
+          "summary": "/croquis/update/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/carroussel/get": {
+        "get": {
+          "summary": "/carroussel/get",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/carroussel/post": {
+        "post": {
+          "summary": "/carroussel/post",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/carroussel/delete/{id}": {
+        "get": {
+          "summary": "/carroussel/delete/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/carroussel/edit/{id}": {
+        "put": {
+          "summary": "/carroussel/edit/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/message/get": {
+        "get": {
+          "summary": "/message/get",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/nodemailerTest": {
+        "post": {
+          "summary": "/nodemailerTest",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/message": {
+        "post": {
+          "summary": "/message",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/message/delete/{id}": {
+        "get": {
+          "summary": "/message/delete/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/": {
+        "get": {
+          "summary": "/",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/actus": {
+        "get": {
+          "summary": "/actus",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/contact": {
+        "get": {
+          "summary": "/contact",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/gallerie": {
+        "get": {
+          "summary": "/gallerie",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/event": {
+        "get": {
+          "summary": "/event",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/article": {
+        "get": {
+          "summary": "/article",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/tarif": {
+        "get": {
+          "summary": "/tarif",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/log": {
+        "get": {
+          "summary": "/log",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      },
+      "/admin": {
+        "get": {
+          "summary": "/admin",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {},
+          "tags": []
+        }
+      }
+    },
+    "swagger": "2.0",
+    "tags": []
+  }

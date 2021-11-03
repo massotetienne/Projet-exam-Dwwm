@@ -1,0 +1,20 @@
+ 
+{{!-- 
+    Page Verified ID
+    /verify/:id
+--}}
+<div class="container mt-20vh">
+{{ message }}
+
+{{#if user }}
+
+{{!-- Formulaire Verified ID --}}
+<form action="/verify/{{ user._id }}" method="post">
+    <div class="row">
+        <input type="hidden" name="email" value="{{ sess.email }}" required>
+    </div>
+    <button type="submit"> validez mon email </button>
+</form>
+
+{{/if }}
+</div>

@@ -1,0 +1,45 @@
+<nav class=" fixed-top navbar navbar-expand-lg bg-black ft-25">
+    <a class="navbar-brand font-weight-bold ft-35" href="/#Calitatoo">Caligari tatoo</a>
+    <button class="navbar-toggler bg-gold" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+        <ul class="navbar-nav d-flex justify-content-around w-100">
+            {{!-- {{#if CPtiGato }} --}}
+            <li class="nav-item active">
+                <a class="nav-link" href="/log">Connectez-vous<span class="sr-only">(current)</span><i
+                        class="pl-3 fas fa-sign-in-alt"></i></a>
+            </li>
+            {{!-- {{/if}} --}}
+            <li class="nav-item ">
+                <a class="nav-link" href="/actus">Actus<i class="pl-3 fas fa-rss"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/gallerie">Galerie<i class="pl-3 fas fa-camera-retro"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Plus d'options
+                </a>
+                
+                <div class="dropdown-menu ft-25 bg-black mt-2 " aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item gold" href="/#contact">Contactez moi<i
+                            class="pl-3 far fa-paper-plane "></i></a>
+                    <a class="dropdown-item gold" href="/event">Evenements<i
+                            class="pl-3 fas fa-map-marker-alt "></i></a>
+                    <a class="dropdown-item gold" href="/tarif">Tarifs<i class="pl-3 fab fa-bitcoin"></i></a>
+                    {{#if user}}
+                    <form action="/user/Logout" method="get">
+                   <button class="bg-tran gold">Deconnection<i class="pl-3 fas fa-person-booth"></i></button>
+                    </form>
+                    {{/if}}
+                    {{#if isAdmin}}
+                    <a class="dropdown-item gold" href="/admin">(Admin)<i class="pl-3 fas fa-person-booth"></i></a>
+                    {{/if}}
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

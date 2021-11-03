@@ -1,0 +1,40 @@
+{{!-- <div class="container-cookie">
+  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#cookieModal">
+    See Cookies
+  </button>
+</div> --}}
+
+<div class="modal fade bg_black" id="cookieModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl fixed-bottom" role="document">
+    <div class="modal-content">
+      <div class="modal-body bg-black">
+        <div class="notice d-flex justify-content-between align-items-center">
+          <div class="buttons d-flex flex-column p-2 flex-lg-row close">
+            <div>
+            {{> cookie/banner }} 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+{{!-- le script piur activer desactiver les cookie --}}
+
+
+{{#unless cookie }}
+<script type="text/javascript">
+  $(
+    document).ready(function () {
+      $('#cookieModal').modal('show');
+    });
+</script>
+{{/unless }}

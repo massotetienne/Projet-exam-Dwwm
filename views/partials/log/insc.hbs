@@ -1,0 +1,160 @@
+<!-- ================================================================================================= -->
+
+<!-- inscription-->
+<div id="inscription" class="mb-10vh"></div>
+<div class="container bg-black text-center  mb-3 ">
+    <h2 class="ft-45 p-2">Inscrivez-vous</h2>
+</div>
+
+<div class="container bg-black mb-3">
+    <section class="register-form">
+        <div class="">
+            <p>Vous avez déjà un compte ? <a class="honey" href="/log">Connectez-vous</a></p>
+        </div>
+        <div class="content">
+            <ol type="1">
+                {{#each errors}}
+                <li> {{this}}</li>
+                {{/each}}
+            </ol>
+        </div>
+        <form class="" action="/user/post" type="submit" method="post">
+            <div class="form-group row ">
+                <label class="col-md-3 form-control-label required">
+                    Nom
+                </label>
+                <div class="col-md-6">
+                    <input class="form-control" name="name" type="text" value={{name}}>
+                </div>
+                <div class="col-md-3 form-control-comment">
+                </div>
+            </div>
+            <div class="form-group row ">
+                <label class="col-md-3 form-control-label required">
+                    E-mail
+                </label>
+                <div class="col-md-6">
+                    <input class="form-control" name="email" type="email" value={{email}}>
+                </div>
+
+                <div class="col-md-3 form-control-comment">
+                </div>
+            </div>
+            <div class="form-group row ">
+                <label class="col-md-3 form-control-label required">
+                    Mot de passe
+                </label>
+                <div class="col-md-6">
+                    <div class="input-group ">
+                        <input class="form-control " name="password" type="password" value={{password}}>
+                    </div>
+                </div>
+            </div>
+             <div class="form-group row ">
+                <label class="col-md-3 form-control-label required">
+                   Comfirmez le Mot de passe
+                </label>
+                <div class="col-md-6">
+                    <div class="input-group ">
+                        <input class="form-control " name="confirmpassword" type="password" value={{password}}>
+                    </div>
+                </div>
+            </div>
+            <footer class="form-footer text-sm-center clearfix">
+                <input type="hidden" name="submitLogin" value="1">
+                <button class="btn bg-gold black mb-3 p-2 pl-5 pr-5" type="submit">Valider</button>
+            </footer>
+            <div class="no-account text-right">
+                <a class="mb-3 honeydew" href="/#contact" data-link-action="display-register-form">
+                    Contactez-moi
+                </a>
+            </div>
+
+
+        </form>
+    </section>
+</div>
+
+<!-- inscription fin -->
+
+<!-- ================================================================================================= -->
+<!-- modal enregistrer -->
+<!-- Central Modal Medium Success -->
+
+{{#if success }}
+<script>
+    $(document).ready(function () {
+        $("#enregister").modal('show');
+    });
+</script>
+<div class="modal fade" id="enregister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-success" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header bg-gold ">
+                <p class="heading lead black ft-35 ">Bienvenue</p>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+                <div class="text-center">
+                    <i class="fas fa-check fa-4x mb-3 animated rotateIn lawn"></i>
+                    <p class="black">{{ success }}</p>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer justify-content-center bg-gold"></div>
+
+
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
+{{/if }}
+
+{{#if error }}
+<script>
+    $(document).ready(function () {
+        $("#enregister").modal('show');
+    });
+</script>
+<div class="modal fade" id="enregister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-warning" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header bg-gold ">
+                <p class="heading lead black ft-35 ">Bienvenue</p>
+
+                <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+                <div class="text-center">
+                    
+                    <i class="fas fa-times mb-3 animated rotateIn ft-45 red"></i>
+                    <p class="black">{{ error }}</p>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer justify-content-center bg-gold"></div>
+
+
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
+{{/if }}
+<!-- Central Modal Medium Success-->

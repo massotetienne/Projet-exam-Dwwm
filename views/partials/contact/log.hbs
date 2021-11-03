@@ -1,0 +1,118 @@
+ <!-- ================================================================================================= -->
+
+    <!-- login -->
+    <div class="container bg-black mb-3">
+        <h2 class="bg-black mt-10vh text-center p-2 ft-45">
+            Connectez-vous</h2>
+    </div>
+
+    <div class="container bg-black">
+        <section id="content" class="page-content card card-block container mb-3 bg-black">
+
+
+
+            <section class="login-form bg-black">
+                <div>
+                    <p class="text-center ft-20">Hey , bienvenue ! </p>
+                </div>
+                <form id="login-form" action="#" method="post">
+                    <section>
+                        <input type="hidden" name="back" value="my-account">
+                        <div class="form-group row ">
+                            <label class="col-md-3 form-control-label required">
+                                E-mail
+                            </label>
+                            <div class="col-md-6">
+                                <input class="form-control" name="email" type="email" value="" required="">
+                            </div>
+                            <div class="col-md-3 form-control-comment">
+                            </div>
+                        </div>
+                        <div class="form-group row ">
+                            <label class="col-md-3 form-control-label required">
+                                Mot de passe
+                            </label>
+                            <div class="col-md-6">
+                                <div class="input-group js-parent-focus">
+                                    <input class="form-control js-child-focus js-visible-password" name="password"
+                                        type="password" value="" pattern=".{5,}" required="">
+                                    <span class="input-group-btn">
+                                        <button class="btn bg-gold black" type="button" data-action="show-password"
+                                            data-text-show="Montrer" data-text-hide="Cacher">
+                                            Montrer
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 form-control-comment">
+                            </div>
+                        </div>
+                        <div class="forgot-password text-right">
+                            <a class="honey" data-toggle="modal" data-target="#mdp-oublier" href="#mdp-oublier"
+                                rel="nofollow">
+                                Mot de passe oublié ?
+                            </a>
+                        </div>
+                    </section>
+                    <footer class="form-footer text-sm-center clearfix">
+                        <input type="hidden" name="submitLogin" value="1">
+                        <button class="btn bg-gold black mb-3 p-2 pl-5 pr-5 " data-link-action="sign-in" type="submit">
+                            Connexion
+                        </button>
+                    </footer>
+                </form>
+            </section>
+            <hr>
+            <div class="no-account mb-3">
+                <a class="honey" href="./log.html#inscription" data-link-action="display-register-form">
+                    Pas de compte ? Créez-en un
+                </a>
+            </div>
+            <div class="bg-black text-left">
+                <ul class="ft-35">
+                    <li class="d-flex justify-content-around">
+                        <h2 class="ft-25">Connectez-vous avec :</h2>
+                        <a href="https://twitter.com/?lang=fr"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://accounts.google.com/ServiceLogin"><i class="fab fa-google"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+    </div>
+    <!-- login -->
+
+    <!-- ================================================================================================= -->
+      <!-- modal mdp oublier -->
+
+    <div class="modal fade " id="mdp-oublier" tabindex="-1" aria-labelledby="mdp-oublier" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-black">
+                <div class="modal-header bg-gold black">
+
+                    <h5 class="modal-title" id="mdp-oublier">Modal title</h5>
+                    <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                        <span class="honey" aria-hidden="false">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Your E-mail"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Envoyer</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-gold"></div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modal mdp fin -->
+    <!-- ================================================================================================= -->

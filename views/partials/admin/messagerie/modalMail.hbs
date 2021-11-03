@@ -1,0 +1,48 @@
+<div class="modal fade" id="modalMail{{_id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-black">
+      <div class="modal-header bg-gold black">
+        <h5 class="modal-title" id="exampleModalLabel">Messagerie</h5>
+        <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+          <span class="honey" aria-hidden="false">&times;</span>
+        </button>
+      </div>
+
+      <form action="nodemailerTest" method="post">
+        <div class="field">
+          <label class="label">sujet</label>
+          <div class="control">
+            <input class="input" type="text" name="sujet">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Nom du client</label>
+          <div class="control">
+            <input class="input" type="text" name="name">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">message</label>
+          <div class="control">
+            <textarea class="textarea" name="message" id="content{{_id}}"></textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">email</label>
+          <div class="control">
+            <input class="input" type="text" name="email">
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">Envoyer</button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

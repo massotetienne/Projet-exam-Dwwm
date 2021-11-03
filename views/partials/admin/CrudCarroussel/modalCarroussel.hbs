@@ -1,0 +1,40 @@
+<div class="modal fade" id="modalCarroussel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-black">
+      <div class="modal-header bg-gold black">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+          <span class="honey" aria-hidden="false">&times;</span>
+        </button>
+      </div>
+
+      <form action="/carroussel/post" method="post" enctype="multipart/form-data">
+        {{!-- image selecteur --}}
+        <div class="file">
+          <label class="file-label">
+            <p>Important le titre doit etre home</p>
+              <input type="text" name="title" required>
+            <input  class="file-input" type="file" name="imageCarroussel" multiple required>
+            {{!-- <input class="file-input" type="file" name="imageCarroussel" multiple required>
+            <input class="file-input" type="file" name="imageCarroussel" multiple required> --}}
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fas fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Choisir une image
+              </span>
+            </span>
+          </label>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link"> Enregistrer</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

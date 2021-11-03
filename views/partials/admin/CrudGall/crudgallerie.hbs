@@ -1,0 +1,67 @@
+<!-- ================================================================================================= -->
+
+<!-- CRUD Galerie -->
+
+<!-- Table -->
+
+<div id="crud-gallerie"></div>
+<div class="container mt-10vh">
+    <h2 class="container text-center bg-black p-2 ft-45 mb-0">CRUD Galerie</h2>
+</div>
+
+<div class="accordion container mb-3" id="accordionExample">
+    <div class="card bg-black">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left bg-gold" type="button" data-toggle="collapse"
+                    data-target="#collapsegal" aria-expanded="true" aria-controls="collapseOne">
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapsegal" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <table class="table  gold container">
+                    <thead>
+                        <tr>
+                            <th class="honey" scope="col">#</th>
+                            <th class="ft-20 honey" scope="col">Titre</th>
+                            <th class="ft-20 honey" scope="col">Status</th>
+                            <th class="text-right ft-20 honey" scope="col">Action</th>
+                            <th class="text-right">
+                                <a href="" data-toggle="modal" data-target="#modalGall">
+                                    <i class="fas fa-plus ft-25" data-toggle="tooltip" data-placement="bottom"
+                                        title="Ajouter/Crée"></i>
+                                </a></th>
+                                {{> admin/CrudGall/modalGall}}
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {{#each galleries}}
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>{{title}}</td>
+                            <td>Posté</td>
+                            <td class="text-right">
+                                <button type="button" class="btn bg-gold btn-sm m-0 py-1 m-2 "data-toggle="modal"
+                                    data-target="#viewGall{{_id}}">Preview</button>
+                                <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
+                                    data-target="#modalUpdGall{{_id}}">Edit</button>
+                                <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
+                                    data-target="#confirmModalGall{{_id}}">supprimer</button>
+                            </td>
+                        </tr>
+                        {{> admin/CrudGall/viewGall}}
+                        {{> admin/CrudGall/modalUpdGall}}
+                        {{/each}}
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div> <!-- Table -->
+
+<!-- CRUD Galerie fin -->

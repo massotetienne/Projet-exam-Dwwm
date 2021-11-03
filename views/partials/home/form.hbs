@@ -1,0 +1,76 @@
+<!-- ================================================================================================= -->
+
+<!-- FORM-contact -->
+
+<div id="contact" class="mb-10vh"></div>
+
+<div class="container bg-black">
+    <h2 class="container text-center  p-2 ft-45 mt-3">Contactez-moi</h2>
+</div>
+<div class="container bg-black mt-3">
+    <section class="register-form">
+        <div class=" text-end">
+            <p>Vous avez déjà un compte ? <a class="honey" href="/log">Connectez-vous !</a></p>
+        </div>
+        <form class="" action="/message" method="post">
+            <section>
+                <input type="hidden" name="id_customer" value="">
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label required">
+                        Nom
+                    </label>
+                    <div class="col-md-6">
+                        <input class="form-control" name="name" type="text" value="" required="">
+                    </div>
+                    <div class="col-md-3 form-control-comment">
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label required">
+                        E-mail
+                    </label>
+                    <div class="col-md-6">
+                        <input class="form-control" name="email" type="email" value="" required="">
+                    </div>
+
+                    <div class="col-md-3 form-control-comment">
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label required">
+                        Sujet
+                    </label>
+                    <div class="col-md-6">
+                        <input class="form-control" name="sujet" type="text" value="" required="">
+                    </div>
+                    <div class="col-md-3 form-control-comment">
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label">
+                        Votre message
+                    </label>
+                    <div class="col-md-6">
+                        <textarea class="form-control" name="message"
+                            placeholder=""></textarea>
+                    </div>
+                </div>
+
+                <!-- test /////////////////////-->
+                <footer class="form-footer text-sm-center clearfix">
+                    <input type="hidden" name="submitLogin" value="1">
+                    <button class="btn black bg-gold mb-3 p-2 pl-5 pr-5" data-link-action="sign-in" type="submit"
+                        data-toggle="modal" data-target="#contact" rel="nofollow">
+                        Envoyer
+                    </button>
+                </footer>
+            </section>
+        </form>
+    </section>
+</div>
+
+
+<!-- FORM-contact fin -->
+
+<!-- ================================================================================================= -->
+

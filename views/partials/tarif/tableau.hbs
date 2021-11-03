@@ -1,0 +1,171 @@
+<!-- ================================================================================================= -->
+
+<!-- tableau tarifs -->
+<div class="container bg-black mt-15vh p-2  text-center">
+    <h2 class="ft-45">Tarifs</h2>
+</div>
+
+<div class="container bg-black mt-3 p-2 ft-25 text-center gold">
+    <p class="ft-20"><i class="fas fa-exclamation-triangle pr-3"></i>Les tarifs sont à titre indicatif chaque
+        oeuvre étant unique .
+        Merci de me contacter pour l'étude de votre projet<i class="fas fa-exclamation-triangle pl-3"></i></p>
+</div>
+
+<table class="table table-bordered table-dark mt-3 bg-black container">
+    <thead>
+        <tr class="gold ft-20">
+            <th scope="col">#</th>
+            <th scope="col">Taille</th>
+            <th scope="col">Noir</th>
+            <th scope="col">Couleur</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="gold">
+            <th scope="row">Le discret</th>
+            <td>Petit</td>
+            <td>80-120€</td>
+            <td>100-150€</td>
+        </tr>
+        <tr class="gold">
+            <th scope="row">Le rebelle</th>
+            <td>Moyen</td>
+            <td>120-250€</td>
+            <td>150-220€</td>
+        </tr>
+        <tr class="gold">
+            <th scope="row">Le furious</th>
+            <td>Grand</td>
+            <td>250€-900€</td>
+            <td>320-990€</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- tableau tarifs fin -->
+
+<!-- ================================================================================================ -->
+<!-- croquis photo -->
+<div class="container bg-black p-2 text-center">
+    <h2 class="ft-45">Mes Croquis recents</h2>
+</div>
+<div class="container-fluid ">
+    <div class="row">
+        {{#each croquis}}
+        <div class="col-md-6 col-sm-12">
+            <img class=" img-actus mt-3 bg-black p-3" src="{{image}}" alt="">
+            <p class="text-center bg-black m-0">Publié par : {{author}}</p>
+            <p class="text-center bg-black">Le : {{dateCreateDB}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<!-- croquis photo -->
+
+<!-- ================================================================================================ -/assets
+    <!-- FORM-contact -->
+
+<div class="container bg-black">
+    <h2 class="container text-center  p-2 ft-45 mt-3 gold">Demandez votre devis gratuit</h2>
+</div>
+<div class="container bg-black mt-3">
+    <section class="register-form">
+        <div class=" text-end">
+            <p>Vous avez déjà un compte ? <a class="honey" href="/log">Connectez-vous !</a></p>
+        </div>
+        <form class="" action="/message" method="post">
+            <section>
+                <input type="hidden" name="id_customer" value="">
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label required">
+                        Nom
+                    </label>
+                    <div class="col-md-6">
+                        <input class="form-control" name="name" type="text" value="" required="">
+                    </div>
+                    <div class="col-md-3 form-control-comment">
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label required">
+                        E-mail
+                    </label>
+                    <div class="col-md-6">
+                        <input class="form-control" name="email" type="email" value="" required="">
+                    </div>
+
+                    <div class="col-md-3 form-control-comment">
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label required">
+                        Sujet
+                    </label>
+                    <div class="col-md-6">
+                        <input class="form-control" name="sujet" type="text" value="" required="">
+                    </div>
+                    <div class="col-md-3 form-control-comment">
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label">
+                        Votre message
+                    </label>
+                    <div class="col-md-6">
+                        <textarea class="form-control" name="message" type="text" value="content"
+                            placeholder=""></textarea>
+                    </div>
+                </div>
+
+                <!-- test /////////////////////-->
+                <footer class="form-footer text-sm-center clearfix">
+                    <input type="hidden" name="submitLogin" value="1">
+                    <button class="btn black bg-gold mb-3 p-2 pl-5 pr-5" data-link-action="sign-in" type="submit"
+                        data-toggle="modal" data-target="#devis" rel="nofollow">
+                        Envoyer
+                    </button>
+                </footer>
+            </section>
+        </form>
+    </section>
+</div>
+
+<!-- FORM-contact fin -->
+{{!-- ===================================== --}}
+
+
+<!-- modal -->
+<!-- Central Modal Medium Success -->
+<div class="modal fade" id="devis" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-success" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header bg-gold">
+                <p class="heading lead black">Message Envoyer</p>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+                <div class="text-center">
+                    <i class="fas fa-check fa-4x mb-3 animated rotateIn lawn"></i>
+                    <p class="black">Votre demande de devis a bien été enregistrer, nous nous éfforcerons d'y repondre
+                        dans les plus bref délais</p>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer justify-content-center bg-gold"></div>
+
+
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
+

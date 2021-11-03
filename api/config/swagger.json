@@ -1,0 +1,200 @@
+{
+    "definitions": {
+        "Article": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "title": {
+                    "type": "String"
+                },
+                "image": {
+                    "type": "String"
+                },
+                "author": {
+                    "type": "String"
+                },
+                "dateCreate": {
+                    "type": "String"
+                },
+                "content": {
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "info": {
+        "title": "caligari-tatoo",
+        "version": "1.0.0",
+        "license": {
+            "name": "ISC"
+        },
+        "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3).\n\nsite vitrine pour Caligari-Tatoo"
+    },
+    "paths": {
+        "/articles/get": {
+            "get": {
+                "summary": "Actus",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in":"body",
+                        "name":"body",
+                        "description": "page actus"
+                        
+                    }
+                ],
+                "responses": {
+                    "404":{
+                        "description": "error 404"
+                    },
+                    "200": {
+                        "description": "page actus",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "tags": [
+                    "Actus"
+                ]
+            }
+        },
+        "/articles/post": {
+            "post": {
+                "summary": "Actus",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Article object to added",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Article"
+                        }
+                    }
+                ],
+                "responses": {
+                    "404":{
+                        "description": "error 404"
+                    },
+                    "200": {
+                        "description": "create article response",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "error",
+                        "schema": {}
+                    }
+                },
+                "tags": [
+                    "Actus"
+                ]
+            }
+        },
+        "/articles/delete/{id}": {
+            "get": {
+                "summary": "Delete one article",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "404":{
+                        "description": "error 404"
+                    },
+                    "200": {
+                        "description": "delete one article response",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "tags": [
+                        "Actus"
+                    ]
+                }
+            }
+        },
+        "/articles/update/{id}": {
+            "post": {
+                "summary": "update one article",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Article object to added",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Article"
+                        }
+                    }
+                ],
+                "responses": {
+                    "404":{
+                        "description": "error 404"
+                    },
+                    "200": {
+                        "description": "update one article",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "tags": [
+                    "Actus"
+                ]
+            }
+        },
+        "/article/{id}": {
+            "get": {
+                "summary": "show article ID",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "404":{
+                        "description": "error 404"
+                    },
+                    "200": {
+                        "description": "show page ID",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "tags": [
+                    "Actus"
+                ]
+            }
+        }
+    },
+    "swagger": "2.0",
+    "tags": [
+        "Actus"
+    ]
+}

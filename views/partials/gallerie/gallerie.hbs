@@ -1,0 +1,90 @@
+
+<div class="container">
+    <h3 class="bg-black mt-15vh text-center p-2 ft-45">Galerie</h3>
+</div>
+
+<div class="container">
+    <form class="form-inline my-2 my-lg-0">
+        <input id='myInput' class="form-control mr-sm-2" type="Type in a name" placeholder="Chercher"
+            aria-label="Search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+        <button class="btn my-2 my-sm-0 bg-gold black " type="submit">Chercher</button>
+    </form>
+</div>
+
+<div class="container-fluid mt-3">
+    <ul id="myUL" class="row list-unstyled">
+        {{#each gallerie}}
+        <li class="col-md-6">
+            <h3 class="bg-black mb-0 p-2 text-center">{{title}}</h3>
+            <img class="img-full img-actus p-3 bg-black" src="{{image}}" alt="">
+            <form action="/article/:id">
+                <a href="/article/{{_id}}">
+                <h3 class="text-center bg-black mb-0">+Détails+</h3>
+            </a>
+            </form>
+            <p class="text-center bg-black mb-0">{{ limitCharacter (stripTags content) 15}}</p>
+            <p class="text-center bg-black mb-0">Cliquez sur +détails+ pour plus d'infos</p>
+            
+            <div class="container bg-black text-right">
+                <p class="text-left">Publié par : {{ author }} </p>
+                <p>Date {{dateCreateDB}}</p>
+            </div>
+        </li>
+       {{/each}}
+    </ul>
+</div>
+
+
+{{!-- filtre de recherche --}}
+<script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+
+        console.log(li)
+        console.log(input)
+        console.log(filter)
+
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            aTxtValue = (a.textContent || a.innerText).toUpperCase().indexOf(filter) > -1;
+            h3 = li[i].getElementsByTagName("h3")[0];
+            h3TxtValue = (h3.textContent || h3.innerText).toUpperCase().indexOf(filter) > -1;
+            p = li[i].getElementsByTagName("p")[1];
+            PTxtValue = (p.textContent || p.innerText).toUpperCase().indexOf(filter) > -1;
+            if (aTxtValue || h3TxtValue || PTxtValue) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+
+{{!-- info de Will============================== --}}
+
+{{!-- function myFunction() {
+        var input, filter, ul, li, a, i, h5, p, txtValue;       //déclaration des variables de la fonction
+        input = document.getElementById("myInput");             //On prend le input ds la page correspondant à l'ID "myInput"
+        filter = input.value.toUpperCase();                     //Retourne la valeur de la chaîne courante dans le input, convertit en majuscules.
+        ul = document.getElementById("myUL");                   //On prend le ul ds la page correspondant à l'ID "myUL"
+        li = ul.getElementsByTagName("li");                     //On prend le li de la div parent ul correspondant à l'ID "myUL"
+        for (i = 0; i < li.length; i++) {                       //Boucle for de i= 0 à le nombre de li dans le ul
+            h5 = li[i].getElementsByTagName("h5")[0];           //Pour chaque i (li) on prend le h5 ([0] correspond au premier h5, [1] au deuxieme h5, etc)
+            txtValue = h5.textContent || h5.innerText;          //La variable Text value prend le contenu du texte de h5 (mettre les deux pour prendre tout les formats de texte et faire un "ou" via ||)
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {  //On verifie le texte de l'input si il est contenu dans la variable txtValue
+                li[i].style.display = "";                       //Si oui on affiche tout le contenu de li de la boucle en question
+            } else {
+                li[i].style.display = "none";                   //Si non, on affiche pas le contenu du li de la boucle en question
+            }
+        } --}}
+
+{{!-- info de Will ============================ --}}
+
+
+

@@ -1,0 +1,36 @@
+<!-- ================================================================================================= -->
+<!-- caroussel ! a modifier la taille des imgs !###############carrousel ne fonctionne plus...##################### -->
+<div class="container mt-15vh bg-black  text-center p-2">
+  <h2 class="ft-45">Welcome to Caligari tatoo </h2>
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide  container mt-3" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+
+     {{#each carroussel.image }}
+      <div class="carousel-item {{ class }}">
+        <img class="d-block img-carrousel" src="{{ path }}" alt="{{ name }}">
+      </div>
+    {{/each}}
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+<!-- carrousel -->
+
+<!-- ================================================================================================= -->

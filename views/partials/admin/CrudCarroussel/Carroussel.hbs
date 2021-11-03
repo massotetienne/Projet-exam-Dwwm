@@ -1,0 +1,101 @@
+<!-- ================================================================================================= -->
+
+<!-- fiches client -->
+
+<div id="fiches-clients"></div>
+<div class="container mt-10vh">
+    <h2 class="container text-center bg-black p-2 ft-45 mt-3 mb-0">Carroussel</h2>
+</div>
+
+<div class="accordion container mb-3" id="accordionExample">
+    <div class="card bg-black">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left bg-gold" type="button" data-toggle="collapse"
+                    data-target="#collapseclient" aria-expanded="true" aria-controls="collapseOne">
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseclient" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+
+                <table class="table  gold container">
+                    <thead>
+                        <tr>
+                            <th class="honey" scope="col">#</th>
+                            <th class="ft-20 honey" scope="col">Nom prénom</th>
+                            <th class="ft-20 honey" scope="col">etat</th>
+                            <th class="text-right ft-20 honey" scope="col">Action</th>
+                            <th class="text-right">
+                                <a href="" data-toggle="modal" data-target="#modalCarroussel">
+                                    <i class="fas fa-plus ft-25" data-toggle="tooltip" data-placement="bottom"
+                                        title="Ajouter/Crée"></i>
+                                </a>
+                            </th>
+                        </tr>
+                        {{> admin/CrudCarroussel/modalCarroussel }}
+                    </thead>
+                    <tbody>
+                        {{#each carroussel }}
+                        <p>{{ title }}</p>
+
+                        {{#if image }}
+
+                        {{#each image }}
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>{{ name }}</td>
+                            <td></td>
+
+                            <td class="text-right">
+                                {{!-- <button type="button" class="btn bg-gold btn-sm m-0 py-1 m-2">Preview</button>
+                                <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
+                                    data-target="#modalUpdCarroussel{{../_id}}">Edit</button>
+                                <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
+                                    data-target="#modalDeleteOne{{../this._id}}">supprimer{{../this._id}}</button> --}}
+                            </td>
+                            
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+
+                        {{!-- Appel du modal avec ID dynamique de l'objectdans la boucle --}}
+                        {{!-- {{> admin/CrudCarroussel/modalUpdCarroussel }} --}}
+                        {{> admin/CrudCarroussel/modalDelete this._id}}
+
+                        {{/each }}
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td class="text-right">
+                                <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
+                                    data-target="#modalDeleteAll{{_id}}">supprimer toutes les images</button>
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        {{> admin/CrudCarroussel/modalDeleteAll }}
+
+                        {{else}}
+
+                        <td class="text-right">
+                            <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
+                                data-target="#modalUpdCarroussel{{_id}}">Edit</button>
+                        </td>
+
+                        {{> admin/CrudCarroussel/modalUpdCarroussel }}
+
+                        {{/if}}
+
+                        {{/each}}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ================================================================================================= -->

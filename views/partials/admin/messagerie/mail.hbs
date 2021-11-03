@@ -1,0 +1,60 @@
+<!-- Mail -->
+<!-- Table -->
+<div id="mails"></div>
+<div class="container mt-10vh">
+    <h2 class="container text-center bg-black p-2 ft-45 mt-3 mb-0">Mails</h2>
+</div>
+<div class="accordion container mb-3" id="accordionExample">
+    <div class="card bg-black">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left bg-gold" type="button" data-toggle="collapse"
+                    data-target="#collapsemail" aria-expanded="true" aria-controls="collapseOne">
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapsemail" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <table class="table  gold container">
+                    <thead>
+                        <tr>
+                            <th class="honey" scope="col">#</th>
+                            <th class="ft-20 honey" scope="col">Clients</th>
+                            <th class="ft-20 honey" scope="col">Sujet</th>
+                            <th class="text-right ft-20 honey" scope="col">Action</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each message}}
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>{{name}}</td>
+                            <td>{{sujet}}</td>
+                            <td class="text-right">
+                                <button type="button" class="btn bg-gold btn-sm m-0 py-1 m-2" data-toggle="modal"
+                                    data-target="#openMail{{_id}}">Ouvrir</button>
+                                <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
+                                    data-target="#modalMail{{_id}}">Repondre</button>
+                                <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
+                                    data-target="#modalDelete{{_id}}">supprimer</button>  
+                            </td>
+                           
+                        </tr>
+                        {{> admin/messagerie/openMail}}
+                        {{> admin/messagerie/modalDelete}}
+                        {{> admin/messagerie/modalMail}}
+                        
+                        {{/each}}
+                    </tbody>
+                </table>
+                <!-- Table -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mail fin -->
+
+<!-- ================================================================================================= -->

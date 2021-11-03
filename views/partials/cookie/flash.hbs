@@ -1,0 +1,56 @@
+{{!-- {{!-- 
+    1) Flash Clear Cookie
+--}}
+{{#if clearCookie }}
+<h4 id='flashClearCookie'> {{ clearCookie }} </h4>
+<script>
+setTimeout(() => {
+  $('#flashClearCookie').hide()
+}, 2000)
+</script>
+{{/if}}
+
+{{!-- 
+    2) Flash New Cookie
+--}}
+{{#if newCookie }}
+<h4 id='flashNewCookie'> {{ newCookie }} </h4>
+<script>
+setTimeout(() => {
+  $('#flashNewCookie').hide()
+}, 2000)
+</script>
+{{/if}}
+
+{{!-- 
+    3) Flash New ptiGato
+--}}
+{{#if newPtiGato }}
+<h4 id='flashNewPtiGato'> {{ newPtiGato }} </h4>
+<script>
+setTimeout(() => {
+  $('#flashNewPtiGato').hide()
+}, 2000)
+</script>
+{{/if}}
+
+{{!-- 
+    4) Flash Kill Cookie || ptiGAto
+--}}
+{{#if clearCookiePtiGato }}
+<h4 id='flashClearPtiGato'> {{ clearCookiePtiGato }} </h4>
+<script>
+setTimeout(() => {
+  $('#flashClearPtiGato').hide()
+}, 2000)
+</script>
+{{/if}}
+
+{{#if clearCookieCookie }}
+<h4 id='flashClearCookieCookie'> {{ clearCookieCookie }} </h4>
+<script>
+setTimeout(() => {
+  $('#flashClearCookieCookie').hide()
+}, 2000)
+</script>
+{{/if}} --}}
