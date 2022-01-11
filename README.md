@@ -27,6 +27,11 @@
 <h3> Server </h3>
 
 ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
+
+<h3> Test unitaires </h3>
+
+![Mocha](https://img.shields.io/badge/-mocha-%238D6748?style=for-the-badge&logo=mocha&logoColor=white)
+![npm](https://img.shields.io/npm/v/chai?color=brown&label=chai&logo=chai&style=plastic)
  
 # Branch:
 
